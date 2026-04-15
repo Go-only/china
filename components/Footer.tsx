@@ -118,17 +118,17 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm" style={muted}>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-teal-500" />
-                <a href="tel:+12345678910" className="transition hover:text-white">
-                  +1 (234) 567 89 10
+                <a href="tel:+79934677703" className="transition hover:text-white">
+                  +7 993 46 777 03
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-teal-500" />
                 <a
-                  href="mailto:info@dolartglobal.com"
+                  href="mailto:DOLART.LLC@gmail.com"
                   className="transition hover:text-white"
                 >
-                  info@dolartglobal.com
+                  DOLART.LLC@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

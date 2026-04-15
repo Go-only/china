@@ -83,7 +83,9 @@ export default function HeroSlider() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#contacts"
+                href="https://t.me/DOLART_NORA_LI"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="pointer-events-auto inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
               >
                 Связаться с менеджером <UserCheck className="h-4 w-4" />
