@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronsRight, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Facebook = (p: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
@@ -83,12 +83,11 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 text-white">
-              <span className="text-2xl font-extrabold tracking-tight">DOLART</span>
-              <ChevronsRight className="h-6 w-6 stroke-[3]" aria-hidden />
-              <span className="ml-1 text-[10px] font-semibold tracking-[0.3em] text-white/80">
-                GLOBAL
-              </span>
+            <div
+              aria-label="DOLART Global"
+              className="flex h-12 w-[200px] items-center justify-center rounded-md bg-fuchsia-500/70 text-xs font-semibold uppercase tracking-widest text-white"
+            >
+              logo 200×48
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed" style={muted}>
               Международная логистика, белый импорт, таможенное оформление,

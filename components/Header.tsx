@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, ChevronsRight } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const navItems = [
   { label: "Главная", href: "#home" },
@@ -15,18 +15,12 @@ export default function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="flex items-center justify-between px-4 py-5 sm:px-8 lg:px-14 xl:px-20">
-        <Link href="#home" className="flex items-center gap-2 text-white">
-          <span className="text-2xl font-extrabold tracking-tight">
-            DOLART
-          </span>
-          <ChevronsRight
-            className="h-6 w-6 stroke-[3] text-white"
-            aria-hidden
-          />
-          <span className="sr-only">Global</span>
-          <span className="ml-1 hidden text-[10px] font-semibold tracking-[0.3em] text-white/80 sm:block">
-            GLOBAL
-          </span>
+        <Link
+          href="#home"
+          aria-label="DOLART Global"
+          className="flex h-12 w-[200px] items-center justify-center rounded-md bg-fuchsia-500/70 text-xs font-semibold uppercase tracking-widest text-white"
+        >
+          logo 200×48
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-white lg:flex">
