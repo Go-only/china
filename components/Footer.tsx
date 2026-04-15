@@ -83,12 +83,13 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
-            <div
-              aria-label="DOLART Global"
-              className="flex h-12 w-[200px] items-center justify-center rounded-md bg-fuchsia-500/70 text-xs font-semibold uppercase tracking-widest text-white"
-            >
-              logo 200×48
-            </div>
+            <img
+              src="./images/logo-dolart.jpg"
+              alt="DOLART Global"
+              width={682}
+              height={770}
+              className="h-20 w-auto"
+            />
             <p className="mt-4 max-w-xs text-sm leading-relaxed" style={muted}>
               Международная логистика, белый импорт, таможенное оформление,
               сертификация и поддержка бизнеса в Китае.

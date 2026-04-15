@@ -15,12 +15,14 @@ export default function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="flex items-center justify-between px-4 py-5 sm:px-8 lg:px-14 xl:px-20">
-        <Link
-          href="#home"
-          aria-label="DOLART Global"
-          className="flex h-12 w-[200px] items-center justify-center rounded-md bg-fuchsia-500/70 text-xs font-semibold uppercase tracking-widest text-white"
-        >
-          logo 200×48
+        <Link href="#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
+          <img
+            src="./images/logo-dolart.jpg"
+            alt="DOLART Global"
+            width={682}
+            height={770}
+            className="h-full w-full object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-white lg:flex">
