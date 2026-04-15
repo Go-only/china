@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Calculator, UserCheck } from "lucide-react";
+import { ChevronLeft, ChevronRight, UserCheck } from "lucide-react";
 
 type Slide = {
   badge: string;
@@ -80,12 +80,6 @@ export default function HeroSlider() {
               {slide.subtitle}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#calculator"
-                className="pointer-events-auto inline-flex items-center gap-2 rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-brand-400"
-              >
-                Calculator <Calculator className="h-4 w-4" />
-              </a>
               <a
                 href="#contacts"
                 className="pointer-events-auto inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
