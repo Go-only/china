@@ -50,16 +50,17 @@ export default function HeroSlider() {
 
   return (
     <section id="home" className="relative">
-      <div className="relative min-h-[640px] w-full overflow-hidden bg-brand-800 sm:min-h-[680px] lg:min-h-[720px]">
-        <div
-          className="pointer-events-none absolute inset-0 transition-[background] duration-700"
-          style={
-            slide.image
-              ? { backgroundImage: `url(${slide.image})`, backgroundSize: "cover", backgroundPosition: "center" }
-              : { backgroundImage: slide.gradient }
-          }
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-900/80 via-brand-800/40 to-transparent" />
+      <div
+        className="relative min-h-[640px] w-full overflow-hidden bg-brand-800 bg-cover bg-center bg-no-repeat sm:min-h-[680px] lg:min-h-[720px]"
+        style={{ backgroundImage: "url(./images/home/header.png)" }}
+      >
+        {slide.image && (
+          <div
+            className="pointer-events-none absolute inset-0 transition-[background] duration-700"
+            style={{ backgroundImage: `url(${slide.image})`, backgroundSize: "cover", backgroundPosition: "center" }}
+          />
+        )}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-900/40 via-transparent to-transparent" />
 
         {!slide.image && (
           <div className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 select-none text-[180px] font-extrabold leading-none text-white/25 sm:right-12 sm:text-[260px] lg:right-20 lg:text-[340px]">
@@ -128,7 +129,7 @@ export default function HeroSlider() {
       </div>
 
       <svg
-        className="pointer-events-none absolute inset-x-0 bottom-0 block h-[80px] w-full sm:h-[110px] lg:h-[140px]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 block h-[36px] w-full sm:h-[80px] lg:h-[140px]"
         viewBox="0 0 1440 140"
         preserveAspectRatio="none"
         aria-hidden

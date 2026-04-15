@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 4873",
     "build": "next build",
+    "build:gh": "DEPLOY_TARGET=gh-pages next build",
     "start": "next start -H 0.0.0.0 -p 4873",
+    "prod": "next build && npx --yes serve out -l tcp://0.0.0.0:4873 --no-clipboard",
     "lint": "eslint"
   },
   "dependencies": {

@@ -1,12 +1,16 @@
-import type { NextConfig } from 'next'                                                                                                                                    
-                                                        
-  const repo = 'china'                                                                                                                                                      
-  const nextConfig: NextConfig = {
-    output: 'export',                                                                                                                                                       
-    images: { unoptimized: true },                      
+import type { NextConfig } from 'next'
+
+const isGhPages = process.env.DEPLOY_TARGET === 'gh-pages'
+const repo = 'china'
+
+const nextConfig: NextConfig = {
+  output: 'export',
+  images: { unoptimized: true },
+  trailingSlash: true,
+  ...(isGhPages && {
     basePath: `/${repo}`,
     assetPrefix: `/${repo}/`,
-    trailingSlash: true,                                                                                                                                                    
-  }
-                                                                                                                                                                            
-  export default nextConfig   
+  }),
+}
+
+export default nextConfig
