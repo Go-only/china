@@ -25,24 +25,24 @@ const Youtube = (p: React.SVGProps<SVGSVGElement>) => (
 );
 
 const company = [
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contacts", href: "#contacts" },
+  { label: "О нас", href: "#about" },
+  { label: "Услуги", href: "#services" },
+  { label: "Блог", href: "#blog" },
+  { label: "Контакты", href: "#contacts" },
 ];
 
 const services = [
-  { label: "White Import", href: "#" },
-  { label: "Customs Clearance", href: "#" },
-  { label: "Certification", href: "#" },
-  { label: "Global Logistics", href: "#" },
+  { label: "Белый импорт", href: "#" },
+  { label: "Таможенное оформление", href: "#" },
+  { label: "Сертификация", href: "#" },
+  { label: "Международная логистика", href: "#" },
 ];
 
 const supportLinks = [
-  { label: "China Support", href: "#" },
-  { label: "Sourcing", href: "#" },
-  { label: "Translators", href: "#" },
-  { label: "Business Trips", href: "#" },
+  { label: "Поддержка в Китае", href: "#" },
+  { label: "Поиск товаров", href: "#" },
+  { label: "Переводчики", href: "#" },
+  { label: "Бизнес-туры", href: "#" },
 ];
 
 const socials = [
@@ -91,8 +91,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed" style={muted}>
-              Global logistics, white import, customs clearance, certification,
-              and business support in China.
+              Международная логистика, белый импорт, таможенное оформление,
+              сертификация и поддержка бизнеса в Китае.
             </p>
             <div className="mt-5 flex items-center gap-3">
               {socials.map(({ Icon, label, href }) => (
@@ -108,13 +108,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <LinkColumn title="Company" items={company} />
-          <LinkColumn title="Services" items={services} />
-          <LinkColumn title="Support" items={supportLinks} />
+          <LinkColumn title="Компания" items={company} />
+          <LinkColumn title="Услуги" items={services} />
+          <LinkColumn title="Поддержка" items={supportLinks} />
 
           {/* Contact */}
           <div>
-            <h4 className="text-base font-bold text-white">Contact</h4>
+            <h4 className="text-base font-bold text-white">Контакты</h4>
             <ul className="mt-4 space-y-3 text-sm" style={muted}>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-teal-500" />
@@ -146,13 +146,13 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs sm:flex-row sm:px-6 lg:px-10">
-          <p style={muted}>© 2024 DOLART Global. All rights reserved.</p>
+          <p style={muted}>© 2024 DOLART Global. Все права защищены.</p>
           <div className="flex gap-6" style={muted}>
             <Link href="#" className="transition hover:text-white">
-              Privacy Policy
+              Политика конфиденциальности
             </Link>
             <Link href="#" className="transition hover:text-white">
-              Terms of Service
+              Пользовательское соглашение
             </Link>
           </div>
         </div>

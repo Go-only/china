@@ -5,36 +5,36 @@ const items = [
   {
     slug: "sea-freight",
     icon: Anchor,
-    title: "Sea Freight",
-    text: "Reliable ocean shipping worldwide.",
+    title: "Морские перевозки",
+    text: "Надёжные морские перевозки по всему миру.",
     bg: "linear-gradient(135deg, #1e5a8a 0%, #2a87c5 100%)",
   },
   {
     slug: "road-freight",
     icon: Truck,
-    title: "Road Freight",
-    text: "Fast and safe delivery by truck.",
+    title: "Автоперевозки",
+    text: "Быстрая и безопасная доставка автотранспортом.",
     bg: "linear-gradient(135deg, #e85d3a 0%, #f0a060 100%)",
   },
   {
     slug: "air-freight",
     icon: Plane,
-    title: "Air Freight",
-    text: "Express delivery by air for urgent cargo.",
+    title: "Авиаперевозки",
+    text: "Экспресс-доставка авиатранспортом для срочных грузов.",
     bg: "linear-gradient(135deg, #4a8fd8 0%, #8fc4f0 100%)",
   },
   {
     slug: "rail-freight",
     icon: TrainFront,
-    title: "Rail Freight",
-    text: "Cost-effective delivery by rail.",
+    title: "Ж/Д перевозки",
+    text: "Экономичная доставка железнодорожным транспортом.",
     bg: "linear-gradient(135deg, #2a6fa8 0%, #f0a040 100%)",
   },
   {
     slug: "multimodal",
     icon: Shuffle,
-    title: "Multimodal",
-    text: "Combined solutions for optimal results.",
+    title: "Мультимодальные",
+    text: "Комбинированные решения для оптимального результата.",
     bg: "linear-gradient(135deg, #3d7fbf 0%, #e67e4a 100%)",
   },
 ];
@@ -45,10 +45,10 @@ export default function Transportation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="text-center">
           <h2 className="text-2xl font-extrabold text-brand-700 sm:text-3xl">
-            Transportation Solutions
+            Виды транспортировки
           </h2>
           <p className="mt-2 text-sm text-slate-600 sm:text-base">
-            We deliver your cargo by any method with maximum efficiency.
+            Доставляем грузы любым способом с максимальной эффективностью.
           </p>
         </div>
 

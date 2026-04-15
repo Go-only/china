@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Phone, ChevronsRight } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About Us", href: "#about" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Support", href: "#support" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contacts", href: "#contacts" },
+  { label: "Главная", href: "#home" },
+  { label: "Услуги", href: "#services" },
+  { label: "О нас", href: "#about" },
+  { label: "Решения", href: "#solutions" },
+  { label: "Поддержка", href: "#support" },
+  { label: "Блог", href: "#blog" },
+  { label: "Контакты", href: "#contacts" },
 ];
 
 export default function Header() {
@@ -52,14 +52,14 @@ export default function Header() {
             <span className="block text-sm font-semibold">
               +1 (234) 567 89 10
             </span>
-            <span className="block text-xs text-white/80">24/7 support</span>
+            <span className="block text-xs text-white/80">Поддержка 24/7</span>
           </span>
         </a>
 
         <button
           type="button"
           className="flex h-10 w-10 flex-col items-center justify-center gap-1 rounded-md border border-white/30 text-white lg:hidden"
-          aria-label="Open menu"
+          aria-label="Открыть меню"
         >
           <span className="block h-0.5 w-5 bg-white" />
           <span className="block h-0.5 w-5 bg-white" />

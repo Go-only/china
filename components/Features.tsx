@@ -5,26 +5,26 @@ const features = [
   {
     slug: "white-import",
     icon: "📦",
-    title: "White Import",
-    text: "We work strictly within the legal framework, ensuring safe and transparent deliveries.",
+    title: "Белый импорт",
+    text: "Работаем строго в правовом поле, обеспечивая безопасные и прозрачные поставки.",
   },
   {
     slug: "customs-clearance",
     icon: "🛃",
-    title: "Customs Clearance",
-    text: "We handle all customs procedures quickly and efficiently.",
+    title: "Таможенное оформление",
+    text: "Быстро и эффективно проходим все таможенные процедуры.",
   },
   {
     slug: "certification",
     icon: "📜",
-    title: "Certification",
-    text: "We help you obtain all necessary certificates for your goods.",
+    title: "Сертификация",
+    text: "Помогаем получить все необходимые сертификаты на товары.",
   },
   {
     slug: "global-logistics",
     icon: "🌐",
-    title: "Global Logistics",
-    text: "Sea, air, road, rail, and multimodal transportation worldwide.",
+    title: "Международная логистика",
+    text: "Морские, авиа, авто, ж/д и мультимодальные перевозки по всему миру.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Features() {
                 {f.text}
               </p>
               <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-accent-500 transition group-hover:gap-2 group-hover:text-accent-600">
-                Learn more <ArrowRight className="h-4 w-4" />
+                Подробнее <ArrowRight className="h-4 w-4" />
               </span>
             </Link>
           ))}

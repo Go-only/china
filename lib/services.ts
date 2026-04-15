@@ -14,41 +14,41 @@ export const services: Record<
   { title: string; subtitle: string }
 > = {
   "sea-freight": {
-    title: "Sea Freight",
-    subtitle: "Reliable ocean shipping worldwide.",
+    title: "Морские перевозки",
+    subtitle: "Надёжные морские перевозки по всему миру.",
   },
   "road-freight": {
-    title: "Road Freight",
-    subtitle: "Fast and safe delivery by truck.",
+    title: "Автоперевозки",
+    subtitle: "Быстрая и безопасная доставка автотранспортом.",
   },
   "air-freight": {
-    title: "Air Freight",
-    subtitle: "Express delivery by air for urgent cargo.",
+    title: "Авиаперевозки",
+    subtitle: "Экспресс-доставка авиатранспортом для срочных грузов.",
   },
   "rail-freight": {
-    title: "Rail Freight",
-    subtitle: "Cost-effective delivery by rail.",
+    title: "Ж/Д перевозки",
+    subtitle: "Экономичная доставка железнодорожным транспортом.",
   },
   multimodal: {
-    title: "Multimodal",
-    subtitle: "Combined solutions for optimal results.",
+    title: "Мультимодальные перевозки",
+    subtitle: "Комбинированные решения для оптимального результата.",
   },
   "white-import": {
-    title: "White Import",
+    title: "Белый импорт",
     subtitle:
-      "We work strictly within the legal framework, ensuring safe and transparent deliveries.",
+      "Работаем строго в правовом поле, обеспечивая безопасные и прозрачные поставки.",
   },
   "customs-clearance": {
-    title: "Customs Clearance",
-    subtitle: "We handle all customs procedures quickly and efficiently.",
+    title: "Таможенное оформление",
+    subtitle: "Быстро и эффективно проходим все таможенные процедуры.",
   },
   certification: {
-    title: "Certification",
-    subtitle: "We help you obtain all necessary certificates for your goods.",
+    title: "Сертификация",
+    subtitle: "Помогаем получить все необходимые сертификаты на товары.",
   },
   "global-logistics": {
-    title: "Global Logistics",
-    subtitle: "Sea, air, road, rail, and multimodal transportation worldwide.",
+    title: "Международная логистика",
+    subtitle: "Морские, авиа, авто, ж/д и мультимодальные перевозки по всему миру.",
   },
 };
 

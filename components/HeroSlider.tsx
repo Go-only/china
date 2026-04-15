@@ -13,24 +13,24 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    badge: "GLOBAL LOGISTICS PARTNER",
-    title: "We Deliver Freight\nWhere You Need It",
+    badge: "ВАШ ЛОГИСТИЧЕСКИЙ ПАРТНЁР",
+    title: "Доставляем грузы туда,\nкуда нужно вам",
     subtitle:
-      "White import, customs clearance, certification,\nand logistics solutions worldwide.",
+      "Белый импорт, таможенное оформление, сертификация\nи логистика по всему миру.",
     gradient: "linear-gradient(135deg, #0f214d 0%, #1b3a8a 40%, #2451b5 100%)",
   },
   {
-    badge: "SEA · AIR · ROAD · RAIL",
-    title: "Multimodal Cargo\nFrom China to Russia",
+    badge: "МОРЕ · АВИА · АВТО · Ж/Д",
+    title: "Мультимодальные перевозки\nиз Китая в Россию",
     subtitle:
-      "Fast delivery, transparent tracking,\nand competitive rates on every route.",
+      "Быстрая доставка, прозрачное отслеживание\nи выгодные ставки на каждом маршруте.",
     gradient: "linear-gradient(135deg, #0b1a3a 0%, #153e7a 40%, #1d6fb5 100%)",
   },
   {
-    badge: "FULL CUSTOMS SUPPORT",
-    title: "Clearance, Certification\nand White Import",
+    badge: "ПОЛНОЕ ТАМОЖЕННОЕ СОПРОВОЖДЕНИЕ",
+    title: "Оформление, сертификация\nи белый импорт",
     subtitle:
-      "We handle documents, taxes and certificates —\nyou receive the goods on time.",
+      "Берём на себя документы, налоги и сертификаты —\nвы получаете груз вовремя.",
     gradient: "linear-gradient(135deg, #0a1f2f 0%, #124a6b 40%, #1e7aa0 100%)",
   },
 ];
@@ -84,7 +84,7 @@ export default function HeroSlider() {
                 href="#contacts"
                 className="pointer-events-auto inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
               >
-                Contact manager <UserCheck className="h-4 w-4" />
+                Связаться с менеджером <UserCheck className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function HeroSlider() {
         <button
           type="button"
           onClick={() => go(index - 1)}
-          aria-label="Previous slide"
+          aria-label="Предыдущий слайд"
           style={{ zIndex: 40, pointerEvents: "auto" }}
           className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/50 bg-black/30 text-white transition hover:bg-white/20 active:scale-95 sm:left-6 sm:h-12 sm:w-12"
         >
@@ -102,7 +102,7 @@ export default function HeroSlider() {
         <button
           type="button"
           onClick={() => go(index + 1)}
-          aria-label="Next slide"
+          aria-label="Следующий слайд"
           style={{ zIndex: 40, pointerEvents: "auto" }}
           className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/50 bg-black/30 text-white transition hover:bg-white/20 active:scale-95 sm:right-6 sm:h-12 sm:w-12"
         >
@@ -118,7 +118,7 @@ export default function HeroSlider() {
               key={i}
               type="button"
               onClick={() => go(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              aria-label={`Перейти к слайду ${i + 1}`}
               className={`h-2 cursor-pointer rounded-full transition-all ${
                 i === index ? "w-8 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
               }`}
