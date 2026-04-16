@@ -71,7 +71,7 @@ export default function HeroSlider() {
 
         <div className="pointer-events-none relative mx-auto flex min-h-[640px] max-w-7xl flex-col justify-center px-4 pt-32 pb-32 sm:min-h-[680px] sm:px-6 lg:min-h-[720px] lg:px-10">
           <div className="max-w-2xl text-white">
-            <div className="mb-5 flex items-center gap-3 text-sm font-semibold tracking-[0.2em] text-brand-200">
+            <div className="mb-5 flex items-center gap-3 text-sm font-semibold tracking-[0.2em] text-brand-200 [text-shadow:_0_2px_12px_rgba(0,0,0,0.8),_0_1px_3px_rgba(0,0,0,0.7)]">
               <span className="flex h-2 w-2 rounded-full bg-accent-500" />
               {slide.badge}
             </div>
