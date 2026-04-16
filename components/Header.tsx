@@ -29,10 +29,10 @@ export default function Header() {
       <div className="flex items-center justify-between px-4 py-5 sm:px-8 lg:px-14 xl:px-20">
         <Link href="#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
           <img
-            src="./images/logo-dolart.jpg"
+            src="./images/logo-dolart.png"
             alt="DOLART Global"
-            width={682}
-            height={770}
+            width={450}
+            height={530}
             className="h-full w-full object-contain"
           />
         </Link>
