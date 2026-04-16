@@ -86,9 +86,9 @@ export default function Footer() {
             <img
               src="./images/logo-dolart.png"
               alt="DOLART Global"
-              width={450}
-              height={530}
-              className="mx-auto h-20 w-auto"
+              width={710}
+              height={740}
+              className="h-20 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed" style={muted}>
               Международная логистика, белый импорт, таможенное оформление,
