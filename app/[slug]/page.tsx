@@ -32,7 +32,7 @@ export default async function ServicePage({
           <p className="mt-3 text-base text-slate-600">{data.subtitle}</p>
 
           <div className="mt-8 space-y-5 text-base leading-relaxed text-slate-700">
-            {LOREM.split("\n\n").map((p, i) => (
+            {(data.body ?? LOREM).split("\n\n").map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
