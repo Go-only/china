@@ -18,7 +18,7 @@ const items: Item[] = [
     title: "Морские перевозки",
     text: "Надёжные морские перевозки по всему миру.",
     bg: "linear-gradient(135deg, #1e5a8a 0%, #2a87c5 100%)",
-    image: "/images/home/ship.jpg",
+    image: "/images/home/ship.png",
   },
   {
     slug: "road-freight",
@@ -26,7 +26,7 @@ const items: Item[] = [
     title: "Автоперевозки",
     text: "Быстрая и безопасная доставка автотранспортом.",
     bg: "linear-gradient(135deg, #e85d3a 0%, #f0a060 100%)",
-    image: "/images/home/truck.jpg",
+    image: "/images/home/truck.png",
   },
   {
     slug: "air-freight",
@@ -34,7 +34,7 @@ const items: Item[] = [
     title: "Авиаперевозки",
     text: "Экспресс-доставка авиатранспортом для срочных грузов.",
     bg: "linear-gradient(135deg, #4a8fd8 0%, #8fc4f0 100%)",
-    image: "/images/home/airplane.jpg",
+    image: "/images/home/airplane.png",
   },
   {
     slug: "rail-freight",
@@ -42,7 +42,7 @@ const items: Item[] = [
     title: "Ж/Д перевозки",
     text: "Экономичная доставка железнодорожным транспортом.",
     bg: "linear-gradient(135deg, #2a6fa8 0%, #f0a040 100%)",
-    image: "/images/home/train.jpg",
+    image: "/images/home/train.png",
   },
   {
     slug: "multimodal",
@@ -50,7 +50,7 @@ const items: Item[] = [
     title: "Мультимодальные",
     text: "Комбинированные решения для оптимального результата.",
     bg: "linear-gradient(135deg, #3d7fbf 0%, #e67e4a 100%)",
-    image: "/images/home/multi.jpg",
+    image: "/images/home/multi.png",
   },
 ];
 
