@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Phone, Mail, X, ChevronDown } from "lucide-react";
 import { asset } from "@/lib/assets";
 
@@ -64,7 +65,7 @@ export default function Header() {
   return (
     <header className={`${scrolled ? "fixed" : "absolute"} inset-x-0 top-0 z-50`}>
       <div className="flex items-center justify-between bg-brand-900/50 px-4 py-5 sm:px-8 lg:px-14 xl:px-20">
-        <a href="/#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
+        <Link href="/#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
           <img
             src={asset("/images/logo-dolart.png")}
             alt="DOLART Global"
@@ -72,17 +73,17 @@ export default function Header() {
             height={740}
             className="h-full w-full object-contain"
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-white lg:flex">
           {primaryNav.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="transition-colors hover:text-accent-400"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
 
           <div className="relative" ref={moreRef}>
@@ -101,14 +102,14 @@ export default function Header() {
             {moreOpen && (
               <div className="absolute right-0 top-full mt-3 w-60 overflow-hidden rounded-lg border border-white/10 bg-brand-900/95 shadow-xl backdrop-blur">
                 {moreNav.map((item) => (
-                  <a
+                  <Link
                     key={item.label}
                     href={item.href}
                     onClick={() => setMoreOpen(false)}
                     className="block px-4 py-3 text-sm text-white transition-colors hover:bg-white/10 hover:text-accent-400"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -180,14 +181,14 @@ export default function Header() {
           </div>
           <nav className="flex flex-col gap-1 px-4 sm:px-8">
             {primaryNav.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="border-b border-white/10 py-4 text-base font-medium text-white transition hover:text-accent-400"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <details className="group border-b border-white/10">
               <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-base font-medium text-white transition hover:text-accent-400">
@@ -196,14 +197,14 @@ export default function Header() {
               </summary>
               <div className="flex flex-col gap-1 pb-2">
                 {moreNav.map((item) => (
-                  <a
+                  <Link
                     key={item.label}
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className="py-3 pl-4 text-base text-white/90 transition hover:text-accent-400"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </details>
