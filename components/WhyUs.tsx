@@ -229,7 +229,7 @@ export default function WhyUs() {
       </section>
 
       {/* Block 2 — light blue */}
-      <section id="about" className="bg-brand-50/60 pb-14 pt-12 sm:pb-20 sm:pt-16">
+      <section id="about" className="scroll-mt-28 bg-brand-50/60 pb-14 pt-12 sm:pb-20 sm:pt-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="grid gap-10 lg:grid-cols-3">
             <div className="lg:col-span-2">

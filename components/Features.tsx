@@ -30,13 +30,13 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="services" className="bg-white py-12 sm:py-16">
+    <section id="services" className="scroll-mt-28 bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
             <Link
               key={f.slug}
-              href={`/services/${f.slug}#content`}
+              href={`/${f.slug}/#content`}
               className="group flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-[0_10px_30px_-12px_rgba(15,33,77,0.15)] ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(15,33,77,0.25)]"
             >
               <div className="mb-4 flex items-center justify-center text-6xl leading-none">

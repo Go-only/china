@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, UserCheck } from "lucide-react";
+import { asset } from "@/lib/assets";
 
 type Slide = {
   badge: string;
@@ -17,7 +18,7 @@ const slides: Slide[] = [
     title: "Доставляем грузы туда,\nкуда нужно вам",
     subtitle:
       "Белый импорт, таможенное оформление, сертификация\nи логистика по всему миру.",
-    image: "./images/home/sl1.jpg",
+    image: asset("/images/home/sl1.jpg"),
     gradient: "linear-gradient(135deg, #0f214d 0%, #1b3a8a 40%, #2451b5 100%)",
   },
   {
@@ -25,7 +26,7 @@ const slides: Slide[] = [
     title: "Мультимодальные перевозки\nиз Китая в Россию",
     subtitle:
       "Быстрая доставка, прозрачное отслеживание\nи выгодные ставки на каждом маршруте.",
-    image: "./images/home/sl2.jpg",
+    image: asset("/images/home/sl2.jpg"),
     gradient: "linear-gradient(135deg, #0b1a3a 0%, #153e7a 40%, #1d6fb5 100%)",
   },
   {

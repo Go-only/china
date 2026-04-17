@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { asset } from "@/lib/assets";
 
 const Facebook = (p: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
@@ -84,7 +85,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="./images/logo-dolart.png"
+              src={asset("/images/logo-dolart.png")}
               alt="DOLART Global"
               width={710}
               height={740}

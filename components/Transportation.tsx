@@ -41,7 +41,7 @@ const items = [
 
 export default function Transportation() {
   return (
-    <section id="solutions" className="bg-brand-50/60 py-12 sm:py-16">
+    <section id="solutions" className="scroll-mt-28 bg-brand-50/60 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="text-center">
           <h2 className="text-2xl font-extrabold text-brand-700 sm:text-3xl">
@@ -58,7 +58,7 @@ export default function Transportation() {
             return (
               <Link
                 key={it.slug}
-                href={`/services/${it.slug}#content`}
+                href={`/${it.slug}/#content`}
                 className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_-12px_rgba(15,33,77,0.12)] ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(15,33,77,0.2)]"
               >
                 <div

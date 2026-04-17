@@ -3,19 +3,21 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Phone, Mail, X } from "lucide-react";
+import { asset } from "@/lib/assets";
 
 const navItems = [
-  { label: "Главная", href: "#home" },
-  { label: "Услуги", href: "#services" },
-  { label: "О нас", href: "#about" },
-  { label: "Решения", href: "#solutions" },
-  { label: "Поддержка", href: "#support" },
-  { label: "Блог", href: "#blog" },
-  { label: "Контакты", href: "#contacts" },
+  { label: "Главная", href: "/#home" },
+  { label: "Услуги", href: "/#services" },
+  { label: "О нас", href: "/#about" },
+  { label: "Решения", href: "/#solutions" },
+  { label: "Поддержка", href: "/#support" },
+  { label: "Блог", href: "/#blog" },
+  { label: "Контакты", href: "/#contacts" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -24,12 +26,19 @@ export default function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className={`${scrolled ? "fixed" : "absolute"} inset-x-0 top-0 z-50`}>
       <div className="flex items-center justify-between bg-brand-900/50 px-4 py-5 sm:px-8 lg:px-14 xl:px-20">
-        <Link href="#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
+        <Link href="/#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
           <img
-            src="./images/logo-dolart.png"
+            src={asset("/images/logo-dolart.png")}
             alt="DOLART Global"
             width={710}
             height={740}
