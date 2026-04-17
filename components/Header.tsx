@@ -22,6 +22,7 @@ const moreNav = [
   { label: "Этапы работы", href: "/work-stages/#content" },
   { label: "FAQ", href: "/faq/#content" },
   { label: "Блог", href: "/blog/#content" },
+  { label: "Страховка груза", href: "/cargo-insurance/#content" },
 ];
 
 export default function Header() {
