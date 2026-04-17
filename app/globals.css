@@ -24,6 +24,9 @@
   --color-navy-900: #03395f;
   --color-field-400: #b4b9bc;
   --color-btn-teal: #5c9ba0;
+
+  --breakpoint-nav-sm: 1180px;
+  --breakpoint-nav: 1480px;
 }
 
 html,
