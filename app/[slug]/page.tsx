@@ -74,10 +74,24 @@ export default async function ServicePage({
           </h1>
           <p className="mt-3 text-base text-slate-600">{data.subtitle}</p>
 
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-slate-700">
-            {(data.body ?? LOREM).split("\n\n").map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          <div className="mt-8 text-base leading-relaxed text-slate-700">
+            {(data.body ?? LOREM).split("\n\n").map((block, i) => {
+              if (block.startsWith("## ")) {
+                return (
+                  <h2
+                    key={i}
+                    className="mt-12 text-2xl font-bold text-ink-900 first:mt-0 sm:text-3xl"
+                  >
+                    {block.slice(3)}
+                  </h2>
+                );
+              }
+              return (
+                <p key={i} className="mt-5 first:mt-0">
+                  {block}
+                </p>
+              );
+            })}
           </div>
         </div>
       </section>
