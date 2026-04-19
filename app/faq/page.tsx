@@ -5,10 +5,37 @@ import Footer from "@/components/Footer";
 import FaqAccordion from "@/components/FaqAccordion";
 import { services } from "@/lib/services";
 import { faqItems } from "@/lib/faq";
+import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/site";
+
+const faqTitle = `${services.faq.title} — DOLART Global`;
+const faqDescription = services.faq.subtitle;
 
 export const metadata: Metadata = {
-  title: `${services.faq.title} — DOLART Global`,
-  description: services.faq.subtitle,
+  title: faqTitle,
+  description: faqDescription,
+  alternates: { canonical: "/faq/" },
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    siteName: SITE_NAME,
+    title: faqTitle,
+    description: faqDescription,
+    url: "/faq/",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1920,
+        height: 1080,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: faqTitle,
+    description: faqDescription,
+    images: [DEFAULT_OG_IMAGE],
+  },
 };
 
 export default function FaqPage() {

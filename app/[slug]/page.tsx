@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
 import { services, LOREM, type ServiceSlug } from "@/lib/services";
+import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/site";
 
 export function generateStaticParams() {
   return Object.keys(services)
@@ -19,9 +20,34 @@ export async function generateMetadata({
   const { slug } = await params;
   const data = services[slug as ServiceSlug];
   if (!data) return {};
+  const title = `${data.title} — DOLART Global`;
+  const path = `/${slug}/`;
   return {
-    title: `${data.title} — DOLART Global`,
+    title,
     description: data.subtitle,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      locale: "ru_RU",
+      siteName: SITE_NAME,
+      title,
+      description: data.subtitle,
+      url: path,
+      images: [
+        {
+          url: DEFAULT_OG_IMAGE,
+          width: 1920,
+          height: 1080,
+          alt: SITE_NAME,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: data.subtitle,
+      images: [DEFAULT_OG_IMAGE],
+    },
   };
 }
 

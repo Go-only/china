@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import {
+  SITE_ORIGIN,
+  SITE_NAME,
+  DEFAULT_OG_IMAGE,
+} from "@/lib/site";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -8,10 +13,36 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const title = "Карго из Китая в Россию — доставка грузов под ключ";
+const description =
+  "Перевозка товаров из Китая в Россию: авто, ж/д, авиа и море. Таможенное оформление, сертификация, страхование. Рассчитайте стоимость доставки.";
+
 export const metadata: Metadata = {
-  title: "Карго из Китая в Россию — доставка грузов под ключ",
-  description:
-    "Перевозка товаров из Китая в Россию: авто, ж/д, авиа и море. Таможенное оформление, сертификация, страхование. Рассчитайте стоимость доставки.",
+  metadataBase: new URL(`${SITE_ORIGIN}/`),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    siteName: SITE_NAME,
+    title,
+    description,
+    url: "/",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1920,
+        height: 1080,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [DEFAULT_OG_IMAGE],
+  },
 };
 
 export default function RootLayout({
