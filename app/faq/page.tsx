@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
 import FaqAccordion from "@/components/FaqAccordion";
 import { services } from "@/lib/services";
 import { faqItems } from "@/lib/faq";
+
+export const metadata: Metadata = {
+  title: `${services.faq.title} — DOLART Global`,
+  description: services.faq.subtitle,
+};
 
 export default function FaqPage() {
   const data = services.faq;

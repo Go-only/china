@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
@@ -8,6 +9,20 @@ export function generateStaticParams() {
   return Object.keys(services)
     .filter((slug) => slug !== "faq")
     .map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const data = services[slug as ServiceSlug];
+  if (!data) return {};
+  return {
+    title: `${data.title} — DOLART Global`,
+    description: data.subtitle,
+  };
 }
 
 export default async function ServicePage({
