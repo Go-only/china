@@ -26,7 +26,7 @@ const moreNav = [
   { label: "Поддержка в Китае", href: "/china-support/#content" },
   { label: "Какие грузы возим", href: "/cargo-types/#content" },
   { label: "Этапы работы", href: "/work-stages/#content" },
-  { label: "FAQ", href: "/faq/#content" },
+  { label: "Ответы на частые вопросы", href: "/faq/#content" },
   { label: "Блог", href: "/blog/#content" },
   { label: "Страховка груза", href: "/cargo-insurance/#content" },
 ];

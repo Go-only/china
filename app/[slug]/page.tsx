@@ -5,7 +5,9 @@ import Footer from "@/components/Footer";
 import { services, LOREM, type ServiceSlug } from "@/lib/services";
 
 export function generateStaticParams() {
-  return Object.keys(services).map((slug) => ({ slug }));
+  return Object.keys(services)
+    .filter((slug) => slug !== "faq")
+    .map((slug) => ({ slug }));
 }
 
 export default async function ServicePage({
