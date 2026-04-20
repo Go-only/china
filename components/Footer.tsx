@@ -80,7 +80,7 @@ export default function Footer() {
   const muted = { color: "lab(71 -1.88 -12.6)" };
   return (
     <footer id="contacts" className="bg-[#022440] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-10 lg:py-14">
+      <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
@@ -146,7 +146,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs sm:flex-row sm:px-6 lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-2 px-4 py-5 text-xs sm:flex-row sm:px-6 lg:px-10">
           <p style={muted}>© 2024 DOLART Global. Все права защищены.</p>
           <div className="flex gap-6" style={muted}>
             <Link href="#" className="transition hover:text-white">

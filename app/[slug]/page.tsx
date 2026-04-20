@@ -93,6 +93,38 @@ export default async function ServicePage({
               );
             })}
           </div>
+
+          {data.table && (
+            <div className="mt-14">
+              <h2 className="text-2xl font-bold text-ink-900 sm:text-3xl">
+                {data.table.caption}
+              </h2>
+              <div className="mt-6 overflow-x-auto rounded-2xl ring-1 ring-slate-200">
+                <table className="w-full border-collapse text-left text-sm">
+                  <thead className="bg-slate-50 text-ink-900">
+                    <tr>
+                      <th className="px-5 py-3 font-semibold">
+                        {data.table.columns[0]}
+                      </th>
+                      <th className="px-5 py-3 font-semibold">
+                        {data.table.columns[1]}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200 text-slate-700">
+                    {data.table.rows.map(([k, v]) => (
+                      <tr key={k} className="align-top">
+                        <td className="px-5 py-4 font-semibold text-ink-900 sm:w-1/3">
+                          {k}
+                        </td>
+                        <td className="px-5 py-4 leading-relaxed">{v}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

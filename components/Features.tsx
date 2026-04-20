@@ -37,7 +37,7 @@ const features = [
 export default function Features() {
   return (
     <section id="services" className="scroll-mt-28 bg-white py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {features.map((f) => (
             <Link

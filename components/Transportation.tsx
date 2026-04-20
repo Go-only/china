@@ -57,7 +57,7 @@ const items: Item[] = [
 export default function Transportation() {
   return (
     <section id="solutions" className="scroll-mt-28 bg-brand-50/60 py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
         <div className="text-center">
           <h2 className="text-2xl font-extrabold text-brand-700 sm:text-3xl">
             Виды транспортировки
