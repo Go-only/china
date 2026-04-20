@@ -14,6 +14,43 @@ function parseRow(line: string): string[] {
     .map((c) => c.trim());
 }
 
+function renderCell(text: string): React.ReactNode {
+  const linkClass = "text-accent-600 underline decoration-slate-300 underline-offset-2 hover:decoration-accent-600";
+
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)) {
+    return (
+      <a href={`mailto:${text}`} className={linkClass}>
+        {text}
+      </a>
+    );
+  }
+
+  if (/^\+\d[\d\s().\-]{6,}$/.test(text)) {
+    const digits = text.replace(/[^\d+]/g, "");
+    return (
+      <a href={`tel:${digits}`} className={linkClass}>
+        {text}
+      </a>
+    );
+  }
+
+  if (/^[a-zA-Z0-9-]+\.(?:pro|ru|com|org|net|io|cn)(?:\/\S*)?$/i.test(text)) {
+    const href = text.startsWith("http") ? text : `https://${text}`;
+    return (
+      <a
+        href={href}
+        className={linkClass}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {text}
+      </a>
+    );
+  }
+
+  return text;
+}
+
 function renderBlock(block: string, i: number) {
   if (block.startsWith("## ")) {
     return (
@@ -87,7 +124,7 @@ function renderBlock(block: string, i: number) {
                         : "px-5 py-4 leading-relaxed"
                     }
                   >
-                    {c}
+                    {j === 0 ? c : renderCell(c)}
                   </td>
                 ))}
               </tr>

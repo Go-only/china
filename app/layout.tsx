@@ -6,6 +6,7 @@ import {
   SITE_NAME,
   DEFAULT_OG_IMAGE,
 } from "@/lib/site";
+import { organizationJsonLd } from "@/lib/organization";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -53,6 +54,12 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${manrope.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
         {children}
       </body>
     </html>
