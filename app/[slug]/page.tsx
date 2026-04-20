@@ -41,7 +41,7 @@ function renderBlock(block: string, i: number) {
         className="mt-8 overflow-x-auto rounded-2xl ring-1 ring-slate-200 first:mt-0"
       >
         <table className="w-full border-collapse text-left text-sm">
-          <thead className="bg-slate-50 text-ink-900">
+          <thead className="bg-slate-200 text-ink-900">
             <tr>
               {header.map((h, j) => (
                 <th key={j} className="px-5 py-3 font-semibold">
@@ -70,6 +70,29 @@ function renderBlock(block: string, i: number) {
           </tbody>
         </table>
       </div>
+    );
+  }
+
+  if (lines.every((l) => /^\s*>\s/.test(l))) {
+    const contentLines = lines.map((l) => l.replace(/^\s*>\s?/, ""));
+    const firstLine = contentLines[0] ?? "";
+    const titleMatch = firstLine.match(/^\*\*(.+?)\*\*\s*$/);
+    const title = titleMatch ? titleMatch[1] : null;
+    const bodyLines = title ? contentLines.slice(1) : contentLines;
+    return (
+      <aside
+        key={i}
+        className="mt-6 rounded-2xl border-l-4 border-amber-400 bg-amber-50 p-5 first:mt-0"
+      >
+        {title && (
+          <p className="mb-2 font-semibold text-ink-900">{title}</p>
+        )}
+        <div className="space-y-2 text-slate-700">
+          {bodyLines.map((l, j) => (
+            <p key={j}>{l}</p>
+          ))}
+        </div>
+      </aside>
     );
   }
 
