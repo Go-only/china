@@ -26,6 +26,31 @@ function renderBlock(block: string, i: number) {
     );
   }
 
+  const videoMatch = block.trim().match(/^\[video(?::\s*([^\]]+))?\]$/);
+  if (videoMatch) {
+    const src = videoMatch[1]?.trim();
+    return (
+      <div
+        key={i}
+        className="mt-8 aspect-video overflow-hidden rounded-2xl bg-slate-900 ring-1 ring-slate-200 first:mt-0"
+      >
+        {src ? (
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            className="h-full w-full object-cover"
+            src={src}
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-sm text-slate-300">
+            Видео скоро появится
+          </div>
+        )}
+      </div>
+    );
+  }
+
   const lines = block.split("\n");
 
   if (
