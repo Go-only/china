@@ -373,7 +373,7 @@ export default function WhyUs() {
                       strokeWidth={1.75}
                     />
                     <div>
-                      <div className="text-2xl font-extrabold leading-none text-white">
+                      <div className="text-sm font-bold leading-tight text-white">
                         {title}
                       </div>
                       <div
