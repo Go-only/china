@@ -47,10 +47,26 @@ const cargo = [
 ];
 
 const stats = [
-  { icon: Briefcase, value: "10+", label: "Лет в логистике" },
-  { icon: Ship, value: "5000+", label: "Доставленных грузов" },
-  { icon: Globe2, value: "120+", label: "Стран" },
-  { icon: Headphones, value: "24/7", label: "Поддержка клиентов" },
+  {
+    icon: Briefcase,
+    title: "Индивидуальный подход",
+    text: "Подбор логистического решения под задачу клиента",
+  },
+  {
+    icon: Ship,
+    title: "Официальная логистика",
+    text: "Официальное сопровождение поставок и документов",
+  },
+  {
+    icon: Globe2,
+    title: "Китай — Россия",
+    text: "Организация поставок под бизнес-задачи",
+  },
+  {
+    icon: Headphones,
+    title: "Поддержка 24/7",
+    text: "Всегда на связи и готовы помочь в решении любых вопросов",
+  },
 ];
 
 const support = [
@@ -349,22 +365,22 @@ export default function WhyUs() {
               </div>
 
               {/* Stats bar */}
-              <div className="mt-10 grid grid-cols-2 gap-4 rounded-2xl bg-navy-900 p-5 sm:grid-cols-4">
-                {stats.map(({ icon: Icon, value, label }) => (
-                  <div key={label} className="flex items-center gap-4">
+              <div className="mt-10 grid grid-cols-1 gap-5 rounded-2xl bg-navy-900 p-5 sm:grid-cols-2">
+                {stats.map(({ icon: Icon, title, text }) => (
+                  <div key={title} className="flex items-start gap-4">
                     <Icon
                       className="h-10 w-10 shrink-0 text-teal-500"
                       strokeWidth={1.75}
                     />
                     <div>
-                      <div className="text-2xl font-extrabold leading-none text-white">
-                        {value}
+                      <div className="text-base font-bold leading-tight text-white">
+                        {title}
                       </div>
                       <div
-                        className="mt-1.5 text-xs"
+                        className="mt-1.5 text-sm leading-snug"
                         style={{ color: "lab(71 -1.88 -12.6)" }}
                       >
-                        {label}
+                        {text}
                       </div>
                     </div>
                   </div>
