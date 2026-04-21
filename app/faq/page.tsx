@@ -3,12 +3,12 @@ import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
 import FaqAccordion from "@/components/FaqAccordion";
-import { services } from "@/lib/services";
+import { seoMeta, services } from "@/lib/services";
 import { faqItems } from "@/lib/faq";
 import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/site";
 
-const faqTitle = `${services.faq.title} — DOLART Global`;
-const faqDescription = services.faq.subtitle;
+const faqTitle = seoMeta.faq?.title ?? `${services.faq.title} — DOLART Global`;
+const faqDescription = seoMeta.faq?.description ?? services.faq.subtitle;
 
 export const metadata: Metadata = {
   title: faqTitle,

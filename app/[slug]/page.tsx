@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
-import { services, type ServiceSlug } from "@/lib/services";
+import { seoMeta, services, type ServiceSlug } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/site";
 
 function parseRow(line: string): string[] {
@@ -189,18 +189,20 @@ export async function generateMetadata({
   const { slug } = await params;
   const data = services[slug as ServiceSlug];
   if (!data) return {};
-  const title = `${data.title} — DOLART Global`;
+  const seo = seoMeta[slug as ServiceSlug];
+  const title = seo?.title ?? `${data.title} — DOLART Global`;
+  const description = seo?.description ?? data.subtitle;
   const path = `/${slug}/`;
   return {
     title,
-    description: data.subtitle,
+    description,
     alternates: { canonical: path },
     openGraph: {
       type: "website",
       locale: "ru_RU",
       siteName: SITE_NAME,
       title,
-      description: data.subtitle,
+      description,
       url: path,
       images: [
         {
@@ -214,7 +216,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title,
-      description: data.subtitle,
+      description,
       images: [DEFAULT_OG_IMAGE],
     },
   };
