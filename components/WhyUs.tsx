@@ -296,7 +296,29 @@ export default function WhyUs() {
           <div className="grid gap-10 lg:grid-cols-3">
             {/* LEFT: content columns (span 2) */}
             <div className="lg:col-span-2">
-              <div className="relative grid gap-10 md:grid-cols-[1fr_auto_1fr] md:items-start">
+              <div className="relative grid gap-y-10 md:grid-cols-[1fr_auto_1fr] md:items-start md:gap-0">
+                {/* Background photo — fills the empty middle column, extends up to the top
+                    of the white section, and fades out on the left/right edges so it doesn't
+                    cross into the text columns */}
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -top-14 bottom-0 left-1/2 z-0 hidden w-[26rem] max-w-[calc(100%-16rem)] -translate-x-1/2 sm:-top-20 md:block"
+                  style={{
+                    WebkitMaskImage:
+                      "linear-gradient(to right, transparent 0%, #000 18%, #000 65%, transparent 100%)",
+                    maskImage:
+                      "linear-gradient(to right, transparent 0%, #000 18%, #000 65%, transparent 100%)",
+                  }}
+                >
+                  <Image
+                    src="/images/home/work.png"
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 420px, 340px"
+                    className="object-cover"
+                  />
+                </div>
+
                 {/* Why Work With Us */}
                 <div className="relative z-10">
                   <h2 className="text-2xl font-extrabold text-ink-900 sm:text-3xl">
@@ -320,11 +342,8 @@ export default function WhyUs() {
                   </ul>
                 </div>
 
-                {/* Divider */}
-                <div
-                  className="hidden w-px self-stretch bg-slate-200 md:block"
-                  aria-hidden
-                />
+                {/* Empty middle spacer — reserves horizontal space for the background photo on desktop */}
+                <div aria-hidden className="hidden md:block md:w-[22rem]" />
 
                 {/* Cargo We Deliver */}
                 <div className="relative z-10">
@@ -347,21 +366,6 @@ export default function WhyUs() {
                   </ul>
                 </div>
 
-                {/* Decorative photo between columns */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute left-1/2 top-40 hidden -translate-x-[102%] md:block"
-                >
-                  <div className="relative aspect-[3/2] w-60 overflow-hidden rounded-2xl ring-1 ring-slate-200">
-                    <Image
-                      src="/images/home/globus.png"
-                      alt=""
-                      fill
-                      sizes="240px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* Stats bar */}
