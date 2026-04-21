@@ -33,9 +33,9 @@ export default function CookieConsent() {
       role="dialog"
       aria-live="polite"
       aria-label="Согласие на обработку cookie"
-      className="fixed inset-x-0 bottom-0 z-[60] px-3 pb-3 sm:px-4 sm:pb-4"
+      className="fixed inset-x-0 bottom-0 z-[60] bg-[#022440] text-sm text-white shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.5)] ring-1 ring-white/10"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 rounded-2xl bg-[#022440] p-5 text-sm text-white shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.5)] ring-1 ring-white/10 sm:p-6 md:flex-row md:items-center md:gap-6">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-4 py-5 sm:px-6 sm:py-6 md:flex-row md:items-center md:gap-6 lg:px-10">
         <p className="flex-1 leading-relaxed text-white/90">
           Продолжая использовать наш сайт, вы даете согласие на обработку
           файлов cookie, пользовательских данных (сведения о местоположении;
