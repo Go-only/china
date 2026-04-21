@@ -33,16 +33,20 @@ const company = [
 ];
 
 const services = [
-  { label: "Сертификация", href: "/certification/#content" },
+  { label: "Белый импорт", href: "/white-import/#content" },
+  { label: "Таможенное оформление", href: "/customs-clearance/#content" },
   { label: "Таможня", href: "/customs/#content" },
+  { label: "Сертификация", href: "/certification/#content" },
   { label: "Способы доставки", href: "/delivery-methods/#content" },
+  { label: "Международная логистика", href: "/global-logistics/#content" },
   { label: "Страховка груза", href: "/cargo-insurance/#content" },
-  { label: "Какие грузы возим", href: "/cargo-types/#content" },
+  { label: "Перевод средств в Китай", href: "/money-transfer/#content" },
 ];
 
 const supportLinks = [
   { label: "Поддержка в Китае", href: "/china-support/#content" },
   { label: "Поиск поставщика", href: "/supplier-search/#content" },
+  { label: "Какие грузы возим", href: "/cargo-types/#content" },
   { label: "Этапы работы", href: "/work-stages/#content" },
   { label: "Запрещённый груз", href: "/prohibited-cargo/#content" },
   { label: "Ответы на частые вопросы", href: "/faq/#content" },
