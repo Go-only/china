@@ -72,12 +72,12 @@ export default function Header() {
   return (
     <header className={`${scrolled ? "fixed" : "absolute"} inset-x-0 top-0 z-50`}>
       <div className="flex items-center justify-between bg-brand-900/50 px-4 py-5 sm:px-8 lg:px-14 xl:px-20">
-        <Link href="/#home" aria-label="DOLART Global" className="flex h-[70px] w-[70px] shrink-0 items-center justify-center">
+        <Link href="/#home" aria-label="DOLART Global" className="flex h-[70px] w-[80px] shrink-0 items-center justify-center">
           <img
             src={asset("/images/logo-dolart.png")}
             alt="DOLART Global"
-            width={710}
-            height={740}
+            width={535}
+            height={467}
             className="h-full w-full object-contain"
           />
         </Link>

@@ -87,8 +87,8 @@ export default function Footer() {
             <img
               src={asset("/images/logo-dolart.png")}
               alt="DOLART Global"
-              width={710}
-              height={740}
+              width={535}
+              height={467}
               className="h-20 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed" style={muted}>
