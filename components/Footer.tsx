@@ -104,8 +104,9 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-2 px-4 py-5 text-xs sm:flex-row sm:px-6 lg:px-10">
           <p style={muted}>
-            Общество с ограниченной ответственностью «ДОЛАРТ». Все права
-            защищены. Любое копирование только с согласия правообладателя.
+            Общество с ограниченной ответственностью «ДОЛАРТ». Все права защищены.
+            <br />
+            Любое копирование только с согласия правообладателя.
           </p>
           <div className="flex gap-6" style={muted}>
             <Link href="/privacy-policy/#content" className="transition hover:text-white">
