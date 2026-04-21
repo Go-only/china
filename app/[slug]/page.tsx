@@ -5,6 +5,7 @@ import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
 import { seoMeta, services, type ServiceSlug } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/site";
+import { asset } from "@/lib/assets";
 
 function parseRow(line: string): string[] {
   return line
@@ -65,7 +66,8 @@ function renderBlock(block: string, i: number) {
 
   const videoMatch = block.trim().match(/^\[video(?::\s*([^\]]+))?\]$/);
   if (videoMatch) {
-    const src = videoMatch[1]?.trim();
+    const rawSrc = videoMatch[1]?.trim();
+    const src = rawSrc?.startsWith("/") ? asset(rawSrc) : rawSrc;
     return (
       <div
         key={i}
