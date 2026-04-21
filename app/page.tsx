@@ -34,10 +34,7 @@ function MoneyTransferBanner() {
           </span>
 
           <div className="relative flex-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
-              Новая услуга
-            </p>
-            <h2 className="mt-2 text-xl font-extrabold leading-tight sm:text-2xl lg:text-[26px]">
+            <h2 className="text-xl font-extrabold leading-tight sm:text-2xl lg:text-[26px]">
               Занимаемся переводом денежных средств в Китай по белой схеме
             </h2>
             <p className="mt-2 text-sm text-white/90 sm:text-base">
