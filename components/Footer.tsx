@@ -26,24 +26,26 @@ const Youtube = (p: React.SVGProps<SVGSVGElement>) => (
 );
 
 const company = [
-  { label: "О нас", href: "#about" },
-  { label: "Услуги", href: "#services" },
-  { label: "Блог", href: "#blog" },
-  { label: "Контакты", href: "#contacts" },
+  { label: "О компании", href: "/about/#content" },
+  { label: "Документы", href: "/documents/#content" },
+  { label: "Контакты", href: "/contacts/#content" },
+  { label: "Блог", href: "/blog/#content" },
 ];
 
 const services = [
-  { label: "Белый импорт", href: "#" },
-  { label: "Таможенное оформление", href: "#" },
-  { label: "Сертификация", href: "#" },
-  { label: "Международная логистика", href: "#" },
+  { label: "Сертификация", href: "/certification/#content" },
+  { label: "Таможня", href: "/customs/#content" },
+  { label: "Способы доставки", href: "/delivery-methods/#content" },
+  { label: "Страховка груза", href: "/cargo-insurance/#content" },
+  { label: "Какие грузы возим", href: "/cargo-types/#content" },
 ];
 
 const supportLinks = [
-  { label: "Поддержка в Китае", href: "#" },
-  { label: "Поиск товаров", href: "#" },
-  { label: "Переводчики", href: "#" },
-  { label: "Бизнес-туры", href: "#" },
+  { label: "Поддержка в Китае", href: "/china-support/#content" },
+  { label: "Поиск поставщика", href: "/supplier-search/#content" },
+  { label: "Этапы работы", href: "/work-stages/#content" },
+  { label: "Запрещённый груз", href: "/prohibited-cargo/#content" },
+  { label: "Ответы на частые вопросы", href: "/faq/#content" },
 ];
 
 const socials = [
