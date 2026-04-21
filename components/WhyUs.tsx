@@ -181,7 +181,7 @@ function ConsultationForm() {
           <div>
             <input
               type="email"
-              placeholder="E-mail"
+              placeholder="Эл. почта"
               className={inputCls}
               {...register("email")}
             />

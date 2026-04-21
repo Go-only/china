@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { asset } from "@/lib/assets";
 
 const Facebook = (p: React.SVGProps<SVGSVGElement>) => (
@@ -131,14 +131,6 @@ export default function Footer() {
                 >
                   DOLART.LLC@gmail.com
                 </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal-500" />
-                <span>
-                  123 Logistics Way,
-                  <br />
-                  New York, NY 10001, USA
-                </span>
               </li>
             </ul>
           </div>
