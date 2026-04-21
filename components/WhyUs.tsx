@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/assets";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -311,7 +312,7 @@ export default function WhyUs() {
                   }}
                 >
                   <Image
-                    src="/images/home/work.png"
+                    src={asset("/images/home/work.png")}
                     alt=""
                     fill
                     sizes="(min-width: 1024px) 420px, 340px"
