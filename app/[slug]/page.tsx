@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
-import { services, LOREM, type ServiceSlug } from "@/lib/services";
+import { services, type ServiceSlug } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/site";
 
 function parseRow(line: string): string[] {
@@ -243,11 +243,11 @@ export default async function ServicePage({
           </h1>
           <p className="mt-3 text-base text-slate-600">{data.subtitle}</p>
 
-          <div className="mt-8 text-base leading-relaxed text-slate-700">
-            {(data.body ?? LOREM).split("\n\n").map((block, i) =>
-              renderBlock(block, i),
-            )}
-          </div>
+          {data.body && data.body.trim() && (
+            <div className="mt-8 text-base leading-relaxed text-slate-700">
+              {data.body.split("\n\n").map((block, i) => renderBlock(block, i))}
+            </div>
+          )}
         </div>
       </section>
 

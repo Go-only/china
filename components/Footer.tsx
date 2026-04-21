@@ -105,10 +105,10 @@ export default function Footer() {
         <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-2 px-4 py-5 text-xs sm:flex-row sm:px-6 lg:px-10">
           <p style={muted}>© 2024 DOLART Global. Все права защищены.</p>
           <div className="flex gap-6" style={muted}>
-            <Link href="#" className="transition hover:text-white">
+            <Link href="/privacy-policy/#content" className="transition hover:text-white">
               Политика конфиденциальности
             </Link>
-            <Link href="#" className="transition hover:text-white">
+            <Link href="/terms-of-use/#content" className="transition hover:text-white">
               Пользовательское соглашение
             </Link>
           </div>

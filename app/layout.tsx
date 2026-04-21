@@ -7,6 +7,7 @@ import {
   DEFAULT_OG_IMAGE,
 } from "@/lib/site";
 import { organizationJsonLd } from "@/lib/organization";
+import CookieConsent from "@/components/CookieConsent";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -61,6 +62,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
