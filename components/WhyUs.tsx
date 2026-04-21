@@ -365,19 +365,19 @@ export default function WhyUs() {
               </div>
 
               {/* Stats bar */}
-              <div className="mt-10 grid grid-cols-1 gap-5 rounded-2xl bg-navy-900 p-5 sm:grid-cols-2">
+              <div className="mt-10 grid grid-cols-2 gap-4 rounded-2xl bg-navy-900 p-5 sm:grid-cols-4">
                 {stats.map(({ icon: Icon, title, text }) => (
-                  <div key={title} className="flex items-start gap-4">
+                  <div key={title} className="flex items-center gap-4">
                     <Icon
                       className="h-10 w-10 shrink-0 text-teal-500"
                       strokeWidth={1.75}
                     />
                     <div>
-                      <div className="text-base font-bold leading-tight text-white">
+                      <div className="text-2xl font-extrabold leading-none text-white">
                         {title}
                       </div>
                       <div
-                        className="mt-1.5 text-sm leading-snug"
+                        className="mt-1.5 text-xs"
                         style={{ color: "lab(71 -1.88 -12.6)" }}
                       >
                         {text}
