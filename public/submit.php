@@ -5,6 +5,12 @@ declare(strict_types=1);
 const MAIL_TO     = 'owner@example.ru';        // кому приходят заявки
 const MAIL_FROM   = 'no-reply@example.ru';     // домен должен быть на Бегете
 const SITE_ORIGIN = 'https://example.ru';      // без слэша в конце
+
+// Версия документа «Согласие на обработку ПДн» и SHA-256 его канонического
+// текста. Менять при каждой редакции текста согласия.
+// Команда: printf '%s' "$(cat consent-pd.txt)" | sha256sum
+const CONSENT_VERSION = 'consent-pd v1 от 20.04.2026';
+const CONSENT_SHA256  = 'TBD_заполнить_после_публикации_текста';
 // ===================================================
 
 const ALLOWED_METHODS = ['Море', 'Авто', 'Авиа', 'Ж/Д', 'Мультимодальный'];
@@ -113,6 +119,12 @@ $lines[] = '';
 $lines[] = '---';
 $lines[] = 'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? '-');
 $lines[] = 'UA: ' . clean($_SERVER['HTTP_USER_AGENT'] ?? '-', 300);
+$now = (new DateTimeImmutable('now', new DateTimeZone('Europe/Moscow')))
+    ->format('Y-m-d H:i:s P');
+$lines[] = 'Дата/время получения согласия: ' . $now;
+$lines[] = 'Согласие: получено (отмечен чекбокс на форме)';
+$lines[] = 'Версия согласия: ' . CONSENT_VERSION;
+$lines[] = 'SHA-256 текста согласия: ' . CONSENT_SHA256;
 
 $body = implode("\n", $lines);
 

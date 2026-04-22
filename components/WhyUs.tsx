@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { asset } from "@/lib/assets";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -106,6 +107,7 @@ function ConsultationForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">(
     "idle",
   );
+  const [consentGiven, setConsentGiven] = useState(false);
 
   const onSubmit = handleSubmit(async (data) => {
     setStatus("sending");
@@ -124,6 +126,7 @@ function ConsultationForm() {
       }
       setStatus("ok");
       reset({ deliveryMethods: [] });
+      setConsentGiven(false);
     } catch {
       setStatus("error");
     }
@@ -260,9 +263,46 @@ function ConsultationForm() {
           </div>
         </div>
 
+        <div className="flex items-start gap-2">
+          <input
+            id="consent-pd"
+            type="checkbox"
+            checked={consentGiven}
+            onChange={(e) => setConsentGiven(e.target.checked)}
+            className="mt-0.5 h-4 w-4 shrink-0 accent-teal-500"
+          />
+          <label
+            htmlFor="consent-pd"
+            className="text-xs leading-relaxed text-white/90"
+          >
+            Я ознакомлен с{" "}
+            <Link
+              href="/privacy-policy/#content"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="underline decoration-white/40 underline-offset-2 transition hover:text-white hover:decoration-white"
+            >
+              Политикой конфиденциальности
+            </Link>{" "}
+            и даю своё согласие на обработку моих персональных данных, в
+            соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ
+            «О персональных данных», на условиях и для целей, определённых в{" "}
+            <Link
+              href="/consent-pd/#content"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="underline decoration-white/40 underline-offset-2 transition hover:text-white hover:decoration-white"
+            >
+              Согласии на обработку персональных данных
+            </Link>
+          </label>
+        </div>
+
         <button
           type="submit"
-          disabled={status === "sending"}
+          disabled={status === "sending" || !consentGiven}
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-white px-4 py-3 text-sm font-semibold text-btn-teal transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === "sending" ? (
@@ -280,9 +320,6 @@ function ConsultationForm() {
             Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам.
           </p>
         )}
-        <p className="text-center text-xs text-white/80">
-          Ваши данные защищены и не передаются третьим лицам.
-        </p>
       </form>
     </div>
   );

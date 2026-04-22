@@ -23,7 +23,8 @@ export type ServiceSlug =
   | "cargo-insurance"
   | "money-transfer"
   | "privacy-policy"
-  | "terms-of-use";
+  | "terms-of-use"
+  | "consent-pd";
 
 // SEO meta (title / description) for внутренних страниц. Используется в
 // generateMetadata ([slug]/page.tsx) и в /faq/page.tsx. Главная (/) и страницы
@@ -276,6 +277,11 @@ export const services: Record<
   "terms-of-use": {
     title: "Пользовательское соглашение",
     subtitle: "Правила использования сайта DOLART Global.",
+  },
+  "consent-pd": {
+    title: "Согласие на обработку персональных данных",
+    subtitle:
+      "Условия и цели обработки персональных данных пользователей сайта.",
   },
   "money-transfer": {
     title: "Перевод денежных средств в Китай по белой схеме",
